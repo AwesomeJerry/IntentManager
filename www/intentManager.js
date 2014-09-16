@@ -4,6 +4,9 @@ var intentManager = {
     },
     openGooglePlay: function(successCallback, errorCallback) {
         cordova.exec(successCallback, errorCallback, 'IntentManager', 'openGooglePlay',[{}]);
+    },
+    openSetting: function(successCallback, errorCallback) {
+        cordova.exec(successCallback, errorCallback, 'IntentManager', 'openSetting',[{}]);
     }
 }
 

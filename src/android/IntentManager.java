@@ -12,6 +12,7 @@ import android.net.Uri;
 public class IntentManager extends CordovaPlugin {
     public static final String ACTION_OPEN_LOCATION = "openLocation";
     public static final String ACTION_OPEN_GOOGLE_PLAY = "openGooglePlay";
+    public static final String ACTION_OPEN_SETTING = "openSetting";
     
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
@@ -26,6 +27,12 @@ public class IntentManager extends CordovaPlugin {
                 JSONObject arg_object = args.getJSONObject(0);
                 Intent intent = new Intent(Intent.ACTION_VIEW,
                     Uri.parse("market://details?id=nccu.mis.gashatrip"));
+                this.cordova.getActivity().startActivity(intent);
+                callbackContext.success();
+                return true;
+            } else if (ACTION_OPEN_SETTING.equals(action)) {
+                JSONObject arg_object = args.getJSONObject(0);
+                Intent intent = new Intent(android.provider.Settings.ACTION_SETTINGS);
                 this.cordova.getActivity().startActivity(intent);
                 callbackContext.success();
                 return true;
