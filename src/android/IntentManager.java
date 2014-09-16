@@ -28,7 +28,7 @@ public class IntentManager extends CordovaPlugin {
                 this.cordova.getActivity().startActivity(intent);
                 callbackContext.success();
                 return true;
-            })
+            }
             callbackContext.error("Invalid action");
             return false;
         } catch(Exception e) {
