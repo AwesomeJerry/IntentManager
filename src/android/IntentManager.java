@@ -7,6 +7,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 
 public class IntentManager extends CordovaPlugin {
     public static final String ACTION_OPEN_LOCATION = "openLocation";
