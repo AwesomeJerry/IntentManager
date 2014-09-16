@@ -18,7 +18,7 @@ public class IntentManager extends CordovaPlugin {
         try {
             if (ACTION_OPEN_LOCATION.equals(action)) { 
                 JSONObject arg_object = args.getJSONObject(0);
-                Intent intent = new Intent(android.provider.Settings.ACTION_SETTINGS);
+                Intent intent = new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS);
                 this.cordova.getActivity().startActivity(intent);
                 callbackContext.success();
                 return true;

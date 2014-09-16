@@ -2,7 +2,7 @@
  
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
            id="jerry.shen.plugin.IntentManager"
-      version="0.1.0">
+      version="0.1.1">
     <name>IntentManager</name>
     <description>Intent Manager Plugin</description>
     <license>MIT</license>
