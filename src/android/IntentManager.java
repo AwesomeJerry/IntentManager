@@ -26,7 +26,7 @@ public class IntentManager extends CordovaPlugin {
             } else if (ACTION_OPEN_GOOGLE_PLAY.equals(action)) { 
                 JSONObject arg_object = args.getJSONObject(0);
                 Intent intent = new Intent(Intent.ACTION_VIEW,
-                    Uri.parse("market://details?id="+arg_object.getString('package_name')));
+                    Uri.parse("market://details?id="+arg_object.getString("package_name")));
                 this.cordova.getActivity().startActivity(intent);
                 callbackContext.success();
                 return true;
