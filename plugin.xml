@@ -1,26 +1,41 @@
-<?xml version="1.0" encoding="UTF-8"?>
- 
-<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
-           id="jerry.shen.plugin.IntentManager"
-      version="0.1.1">
-    <name>IntentManager</name>
-    <description>Intent Manager Plugin</description>
-    <license>MIT</license>
-    <keywords>phonegap,intent,manager,plugin</keywords>
- 
- 
-    <js-module src="www/intentManager.js" name="IntentManager">
-        <clobbers target="window.intentManager" />
-    </js-module>
- 
-    <!-- android -->
-    <platform name="android">
-        <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="IntentManager">
-                <param name="android-package" value="jerry.shen.plugin.IntentManager"/>
-            </feature>
-        </config-file>
- 
-        <source-file src="src/android/IntentManager.java" target-dir="src/jerry/shen/plugin" />      
-     </platform>          
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" id="jerry.shen.plugin.IntentManager" version="0.1.1">
+	<name>IntentManager</name>
+	<description>Intent Manager Plugin</description>
+	<license>MIT</license>
+	<keywords>phonegap,intent,manager,plugin</keywords>
+
+
+	<js-module src="www/intentManager.js" name="IntentManager">
+		<clobbers target="window.intentManager" />
+	</js-module>
+
+	<!-- android -->
+	<platform name="android">
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="IntentManager">
+				<param name="android-package" value="jerry.shen.plugin.IntentManager" />
+			</feature>
+		</config-file>
+
+		<source-file src="src/android/IntentManager.java" target-dir="src/jerry/shen/plugin" />
+	</platform>
+
+	<!-- ios -->
+	<platform name="ios">
+
+		<config-file target="config.xml" parent="/*">
+			<feature name="IntentManager">
+				<param name="ios-package" value="IntentManager" />
+				<param name="onload" value="true" />
+			</feature>
+		</config-file>
+
+		<!-- <header-file src="src/ios/IntentManager.h"/>
+		<source-file src="src/ios/IntentManager.m"/> -->
+
+		<!-- <framework src="CoreLocation.framework" weak="true" /> -->
+
+	</platform>
 </plugin>
