@@ -2,7 +2,7 @@ import Foundation
 import CoreLocation
 
 // 轉跳setting APP
-class IntentManager : CDVPlugin {
+@objc(IntentManager)class IntentManager : CDVPlugin {
 
 	func openSetting() {
 
