@@ -9,7 +9,10 @@ var intentManager = {
     },
     openSetting: function(successCallback, errorCallback) {
         cordova.exec(successCallback, errorCallback, 'IntentManager', 'openSetting',[{}]);
-    }
+    },
+	echo: function(successCallback, errorCallback) {
+		cordova.exec(successCallback, errorCallback, "Echo", "echo", [{}]);
+	}
 }
 
 module.exports = intentManager;

@@ -1,18 +1,14 @@
+// Plugins/Echo.swift
+ 
 import Foundation
-import CoreLocation
-
-// 轉跳setting APP
-@objc(IntentManager)class IntentManager : CDVPlugin {
-
-	func openSetting() {
-
-		if let settingURL = NSURL(string: UIApplicationOpenSettingsURLString) {
-			UIApplication.sharedApplication().openURL( settingURL )
-		}
-
-	}
-
-// itms://itunes.apple.com/de/app/x-gift/id839686104?mt=8&uo=4
-
+ 
+@objc(Echo) class Echo : CDVPlugin {
+  func echo(command: CDVInvokedUrlCommand) {
+    var message = "Hello"
+	
+    message = message.uppercaseString // Prove the plugin is actually doing something
+ 
+    var pluginResult = CDVPluginResult(status: CDVCommandStatus_OK, messageAsString: message)
+    commandDelegate.sendPluginResult(pluginResult, callbackId:command.callbackId)
+  }
 }
-
