@@ -33,7 +33,7 @@
 		</config-file>
 
 <!--		<header-file src="src/ios/IntentManager.h"/>-->
-<!--		<source-file src="src/ios/GashaTrip-Bridgings-Header.h" target-dir="Plugins"/>-->
+		<header-file src="src/ios/GashaTrip-Bridging-Header.h"/>
 		<source-file src="src/ios/IntentManager.swift" target-dir="Plugins"/>
 		<!-- <framework src="CoreLocation.framework" weak="true" /> -->
 
