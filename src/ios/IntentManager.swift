@@ -4,7 +4,7 @@ import CoreLocation
 // 轉跳setting APP
 @objc(IntentManager) class IntentManager : CDVPlugin {
 
-	func openSetting() {
+	func openSetting(command: CDVInvokedUrlCommand) {
 
 		if let settingURL = NSURL(string: UIApplicationOpenSettingsURLString) {
 			UIApplication.sharedApplication().openURL( settingURL )
