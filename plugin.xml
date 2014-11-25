@@ -24,18 +24,13 @@
 
 	<!-- ios -->
 	<platform name="ios">
-
 		<config-file target="config.xml" parent="/*">
 			<feature name="IntentManager">
 				<param name="ios-package" value="IntentManager" />
 				<param name="onload" value="true" />
 			</feature>
 		</config-file>
-
-<!--		<header-file src="src/ios/IntentManager.h"/>-->
 		<source-file src="src/ios/GashaTrip-Bridging-Header.h" target-dir="../"/>
 		<source-file src="src/ios/IntentManager.swift" target-dir="Plugins"/>
-		<!-- <framework src="CoreLocation.framework" weak="true" /> -->
-
 	</platform>
 </plugin>
