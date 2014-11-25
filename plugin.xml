@@ -7,6 +7,9 @@
 	<keywords>phonegap,intent,manager,plugin</keywords>
 
 
+	<js-module src="www/intentManager.js" name="IntentManager">
+		<clobbers target="window.intentManager" />
+	</js-module>
 	<js-module src="www/echo.js" name="Echo">
 		<clobbers target="window.echo" />
 	</js-module>
