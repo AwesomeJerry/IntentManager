@@ -13,8 +13,12 @@ import Foundation
 	
 	// 開啟App Store
 	func openAppStore(command: CDVInvokedUrlCommand) {
-	//這邊要想辦法接參數，想說app id可以由js帶過來
-	//然後就開啟相對應的App Store頁面
+        var obj: AnyObject = command.arguments[0] as AnyObject!
+        let app_id: String = obj["app_id"] as String
+
+        if let appURL = NSURL(string: "itms-apps://itunes.apple.com/app/bars/id\(app_id)") {
+            UIApplication.sharedApplication().openURL( appURL )
+        }
 	}
 }
 
